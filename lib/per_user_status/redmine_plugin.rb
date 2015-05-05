@@ -1,3 +1,5 @@
+require "per_user_status/patches"
+
 module PerUserStatus
   # Registers this gems a Redmine plugin and applies the needed patches
   class RedminePlugin
@@ -5,7 +7,12 @@ module PerUserStatus
 
     def initialize
       register!
+      patch_migration_directory!
       boot!
+    end
+
+    def self.migration_directory
+      File.expand_path("../../../db/migrate", __FILE__)
     end
 
     private
@@ -23,7 +30,8 @@ module PerUserStatus
     end
 
     def boot!
-      # nothing yet
+      require "per_user_status/hooks"
+      Patches.apply!
     end
 
     def patch_migration_directory!
