@@ -2,12 +2,20 @@ module PerUserStatus
   # Includes an additional input field into the account settings
   # and the user's administration pages
   class Hooks < Redmine::Hook::ViewListener
-    # Inject javascript and stylesheet tags
+    # Inject stylesheet tags
     # @param _context [Hash] ignored
+    def view_layouts_base_html_head(_context)
+      stylesheet_link_tag "per_user_status", plugin: "per_user_status"
+    end
+
+    # Inject input field into "My account" form
+    # @param context [Hash] hook context
     def view_my_account(context)
       extend_form(context)
     end
 
+    # Inject input field into "Edit user" form
+    # @param context [Hash] hook context
     def view_users_form(context)
       extend_form(context)
     end
@@ -30,23 +38,21 @@ module PerUserStatus
       end
 
       def to_html
-        content_tag :fieldset do
-          legend + content_tag(:p) do
-            input
-          end
+        content_tag(:p) do
+          input + hint
         end
       end
 
       private
 
-      def legend
-        content_tag :legend do
-          l(:label_per_user_status_legend)
+      def hint
+        content_tag :span, class: "hint" do
+          l(:per_user_status_form_hint)
         end
       end
 
       def input
-        label = l(:label_per_user_status_custom_status)
+        label = l(:per_user_status_form_custom_status)
         f.text_field :custom_status, label: label
       end
 

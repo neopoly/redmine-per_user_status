@@ -9,6 +9,7 @@ module PerUserStatus
       register!
       patch_migration_directory!
       boot!
+      mirror_assets!
     end
 
     def self.migration_directory
@@ -18,7 +19,7 @@ module PerUserStatus
     private
 
     def register!
-      @plugin = Redmine::Plugin.register :user_wiki_macro do
+      @plugin = Redmine::Plugin.register :per_user_status do
         name NAME
         author AUTHORS.keys.join(", ")
         description DESCRIPTION
@@ -40,6 +41,10 @@ module PerUserStatus
           ::PerUserStatus::RedminePlugin.migration_directory
         end
       end
+    end
+
+    def mirror_assets!
+      @plugin.mirror_assets
     end
   end
 end

@@ -6,12 +6,12 @@ module PerUserStatus
       extend ActiveSupport::Concern
 
       included do
-        alias_method_chain :name, :per_user_status
+        alias_method_chain :name, :custom_status
         safe_attributes :custom_status
       end
 
-      def name_with_per_user_status(formatter = nil)
-        default = name_without_per_user_status(formatter)
+      def name_with_custom_status(formatter = nil)
+        default = name_without_custom_status(formatter)
         if custom_status.present?
           "#{default} (#{custom_status})"
         else
