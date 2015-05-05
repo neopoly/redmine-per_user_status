@@ -5,7 +5,7 @@
 [inchpages]: https://inch-ci.org/github/neopoly/redmine-per_user_status
 [inchpages-badge]: https://inch-ci.org/github/neopoly/redmine-per_user_status.svg?branch=master&style=flat
 
-# redmine-per_user_info
+# redmine-per_user_status
 
 [![Gem Version][gem-badge]][gem]
 [![Inline docs][inchpages-badge]][inchpages]
@@ -22,7 +22,7 @@ Allows users to set a custom status which will be displayed next to their names 
 Ensure you have a `Gemfile.local` file in your Redmine installation. Add to your `Gemfile.local`:
 
 ```ruby
-gem "redmine-per_user_info"
+gem "redmine-per_user_status"
 ```
 
 And then execute:
@@ -47,7 +47,7 @@ No automatic tests, sir! But this Redmine plugin is used in production.
 
 ## Contributing
 
-1. Fork it ( https://github.com/neopoly/redmine-per_user_info/fork )
+1. Fork it ( https://github.com/neopoly/redmine-per_user_status/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
