@@ -25,5 +25,13 @@ module PerUserStatus
     def boot!
       # nothing yet
     end
+
+    def patch_migration_directory!
+      @plugin.instance_eval do
+        def migration_directory
+          ::PerUserStatus::RedminePlugin.migration_directory
+        end
+      end
+    end
   end
 end
