@@ -1,9 +1,9 @@
-[github]: https://github.com/neopoly/redmine-per_user_info
-[doc]: http://rubydoc.info/github/neopoly/redmine-per_user_info/master/file/README.md
-[gem]: https://rubygems.org/gems/redmine-per_user_info
-[gem-badge]: https://img.shields.io/gem/v/redmine-per_user_info.svg
-[inchpages]: https://inch-ci.org/github/neopoly/redmine-per_user_info
-[inchpages-badge]: https://inch-ci.org/github/neopoly/redmine-per_user_info.svg?branch=master&style=flat
+[github]: https://github.com/neopoly/redmine-per_user_status
+[doc]: http://rubydoc.info/github/neopoly/redmine-per_user_status/master/file/README.md
+[gem]: https://rubygems.org/gems/redmine-per_user_status
+[gem-badge]: https://img.shields.io/gem/v/redmine-per_user_status.svg
+[inchpages]: https://inch-ci.org/github/neopoly/redmine-per_user_status
+[inchpages-badge]: https://inch-ci.org/github/neopoly/redmine-per_user_status.svg?branch=master&style=flat
 
 # redmine-per_user_info
 
