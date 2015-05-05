@@ -1,0 +1,12 @@
+StringLiterals:
+  EnforcedStyle: "double_quotes"
+
+Style/FileName:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Lint/HandleExceptions:
+  Exclude:
+    - rakelib/rubocop.rake
