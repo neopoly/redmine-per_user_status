@@ -1,6 +1,6 @@
 module PerUserStatus
-  # Includes an additional input field into the account settings
-  # and the user's administration pages
+  # Add custom CSS file to layout and includes an additional input field into
+  # the account settings and the user's administration pages
   class Hooks < Redmine::Hook::ViewListener
     # Inject stylesheet tags
     # @param _context [Hash] ignored

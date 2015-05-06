@@ -12,6 +12,9 @@ module PerUserStatus
       mirror_assets!
     end
 
+    # As this plugin is realized as a gem Redmine won't detect the
+    # migration automatically.
+    # @return [String] Absolute path to "db/migrate"
     def self.migration_directory
       File.expand_path("../../../db/migrate", __FILE__)
     end

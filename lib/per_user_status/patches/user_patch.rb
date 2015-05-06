@@ -10,6 +10,9 @@ module PerUserStatus
         safe_attributes :custom_status
       end
 
+      # Appends the custom user status to the base user name
+      # @param formatter The formatter to use for the name
+      # @see User#name
       def name_with_custom_status(formatter = nil)
         default = name_without_custom_status(formatter)
         if custom_status.present?

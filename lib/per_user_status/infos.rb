@@ -1,4 +1,5 @@
 module PerUserStatus
+  # Shared plugin description
   module Infos
     NAME        = "redmine-per_user_status"
     DESCRIPTION = "Allows users to set a custom status which will be " \
