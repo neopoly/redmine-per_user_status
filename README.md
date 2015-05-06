@@ -35,7 +35,22 @@ Restart the Redmine application
 
 ## Usage
 
-No further steps needed
+1. Install the gem and require the gem
+2. Switch to "My account" and set a custom status (Screenshot 1)
+3. Or change a user's status using the administration panel
+4. The custom user status will be displayed next to the full names
+
+**Screenshot: Status next to assignee**
+
+![Screenshot Issue](https://neopoly.github.io/redmine-per_user_status/images/screenshot1.png)
+
+**Screenshot: My account**
+
+![Screenshot MyAccount](https://neopoly.github.io/redmine-per_user_status/images/screenshot2.png)
+
+**Screenshot: Administration**
+
+![Screenshot Administration](https://neopoly.github.io/redmine-per_user_status/images/screenshot3.png)
 
 ## Testing
 
