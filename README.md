@@ -31,6 +31,12 @@ And then execute:
 $ bundle
 ```
 
+This plugin ships with a migration. To update the database run:
+
+```
+$ rake redmine:plugins:migrate
+```
+
 Restart the Redmine application
 
 ## Usage
