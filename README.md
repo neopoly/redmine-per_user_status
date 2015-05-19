@@ -34,7 +34,7 @@ $ bundle
 This plugin ships with a migration. To update the database run:
 
 ```
-$ rake redmine:plugins:migrate
+$ rake db:migrate
 ```
 
 Restart the Redmine application

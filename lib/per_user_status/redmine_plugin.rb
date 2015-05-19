@@ -7,16 +7,8 @@ module PerUserStatus
 
     def initialize
       register!
-      patch_migration_directory!
       boot!
       mirror_assets!
-    end
-
-    # As this plugin is realized as a gem Redmine won't detect the
-    # migration automatically.
-    # @return [String] Absolute path to "db/migrate"
-    def self.migration_directory
-      File.expand_path("../../../db/migrate", __FILE__)
     end
 
     private
@@ -36,14 +28,6 @@ module PerUserStatus
     def boot!
       require "per_user_status/hooks"
       Patches.apply!
-    end
-
-    def patch_migration_directory!
-      @plugin.instance_eval do
-        def migration_directory
-          ::PerUserStatus::RedminePlugin.migration_directory
-        end
-      end
     end
 
     def mirror_assets!
